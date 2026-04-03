@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projek STS Genap FindIt</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <nav>
+        <div class="logo">Find'It</div>
+        <ul class="nav-links">
+          <li><a href="#cara-kerja">Cara Kerja</a></li>
+          <li><a href="#lapor" class="nav-cta">Buat Laporan</a></li>
+        </ul>
+      </nav>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Sistem Lost & Found Digital untuk Sekolah
+        </div>
+        <h1>
+          Temukan yang Hilang,<br />Kembalikan yang
+          <span class="accent">Ditemukan</span>
+        </h1>
+        <p>
+          FindIt memudahkan seluruh warga sekolah untuk melaporkan barang
+          hilang, mencatat barang temuan, dan mempertemukan keduanya dengan
+          cepat.
+        </p>
+        <div class="hero-btns">
+          <a href="#lapor" class="btn-primary">📋 Lapor Barang</a>
+          <a href="#search" class="btn-secondary">🔍 Cari Barang</a>
+        </div>
+      </section>
+
+      <section class="how" id="cara-kerja">
+        <div class="how-header">
+          <p class="section-label">Cara Kerja</p>
+          <h2 class="section-title">Mudah dalam 3 Langkah</h2>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">📝</div>
+            <h3>Buat Laporan</h3>
+            <p>
+              Isi formulir dengan detail barang yang hilang atau yang kamu
+              temukan.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-num">🗄️</div>
+            <h3>Data Tersimpan</h3>
+            <p>
+              Laporan kamu langsung masuk ke dalam sistem dan dapat diakses oleh
+              seluruh pengguna di sekolah.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-num">🤝</div>
+            <h3>Barang Dikembalikan</h3>
+            <p>
+              Pemilik barang dapat mencari dan menghubungi pelapor untuk
+              mengambil kembali barang mereka.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="lapor" class="form-card">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Nama Barang</label>
+            <input
+              id="inputBarang"
+              type="text"
+              placeholder="Contoh: Botol Minum"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Nama</label>
+            <input
+              id="inputNama"
+              type="text"
+              placeholder="Contoh: Eka Cicurug 3"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Lokasi</label>
+            <input
+              id="inputLokasi"
+              type="text"
+              placeholder="Contoh: Lapangan"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Status</label>
+            <select id="inputStatus">
+              <option value="">Pilih status...</option>
+              <option>Ditemukan</option>
+              <option>Hilang</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Ciri-ciri</label>
+            <input
+              id="inputCiri"
+              type="text"
+              placeholder="Contoh: Biru ada stiker"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Waktu</label>
+            <input id="inputWaktu" type="date" />
+          </div>
+        </div>
+      </section>
+
+      <section class="report-section" id="daftar">
+        <button id="submitReport">Kirim Laporan</button>
+
+        <div class="section-label">Semua Laporan</div>
+
+        <input type="text" id="search" placeholder="Cari barang..." />
+
+        <div class="filter-row">
+          <button
+            class="filter-chip active"
+            onclick="filterData('semua', this)"
+          >
+            Semua
+          </button>
+          <button class="filter-chip" onclick="filterData('Ditemukan', this)">
+            Ditemukan
+          </button>
+          <button class="filter-chip" onclick="filterData('Hilang', this)">
+            Hilang
+          </button>
+        </div>
+
+        <div id="laporan"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 <span>FindIt</span>. Membantu menemukan yang hilang</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
